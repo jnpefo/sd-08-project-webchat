@@ -78,7 +78,7 @@ O MVC será usado para renderizar as mensagens do histórico e usuários online,
 
   - Projeto individual.
 
-  - Serão `X` dias de projeto.
+  - Serão `3` dias de projeto.
 
   - Data de entrega para avaliação final do projeto: `20/07/2021 - 14:00h`.
 
