@@ -83,7 +83,7 @@ O MVC será usado para renderizar as mensagens do histórico e usuários online,
 
   - Projeto individual.
 
-  - Serão `X` dias de projeto.
+  - Serão `3` dias de projeto.
 
   - Data de entrega para avaliação final do projeto: `20/07/2021 - 14:00h`.
 
@@ -243,7 +243,7 @@ Caso prefira testar um requisito por vez pode executar o teste da seguinte forma
 
  - O formato da mensagem deve seguir esse padrão:
 
-`DD-MM-yyyy HH:mm:ss ${message.nickname} ${message.chatMessage}`
+`DD-MM-yyyy HH:mm:ss ${nickname} ${chatMessage}`
 
 - Exemplo prático:
 
