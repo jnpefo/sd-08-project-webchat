@@ -238,7 +238,7 @@ Caso prefira testar um requisito por vez pode executar o teste da seguinte forma
 
  - O formato da mensagem deve seguir esse padrão:
 
-`DD-MM-yyyy HH:mm:ss ${message.nickname} ${message.chatMessage}`
+`DD-MM-yyyy HH:mm:ss ${nickname} ${chatMessage}`
 
 - Exemplo prático:
 
