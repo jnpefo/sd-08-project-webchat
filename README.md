@@ -1,3 +1,8 @@
+<!-- 
+https://github.com/tryber/sd-08-project-webchat/pull/15 
+-->
+
+
 ### Termos e acordos
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
