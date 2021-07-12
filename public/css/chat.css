@@ -5,11 +5,11 @@
 }
 
 body {
-  font: 13px Helvetica, Arial;
+  font: 13px;
 }
 
 form {
-  background: #000;
+  background: black;
   bottom: 0;
   padding: 3px;
   position: fixed;
@@ -29,18 +29,4 @@ form button {
   cursor: pointer;
   padding: 10px;
   width: 9%;
-}
-
-#messages {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#messages li {
-  padding: 5px 10px;
-}
-
-#messages li:nth-child( odd ) {
-  background: #eee;
 }
