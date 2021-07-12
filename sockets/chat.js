@@ -10,10 +10,11 @@ module.exports = (io) => {
     socket.on('message', ({ chatMessage, nickname }) => {
       const message = `${data} - ${nickname}: ${chatMessage}`;
 
-      // console.log(message);
       io.emit('message', message);
     });
 
-    socket.broadcast.emit('message', 'Tivemos nova conexão!');
+    socket.on('user', (user) => {
+      io.emit('user', user);
+    });
   });
 };

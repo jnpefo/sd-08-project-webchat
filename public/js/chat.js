@@ -7,16 +7,16 @@ const inputMessage = document.querySelector('#messageInput');
 const inputUser = document.querySelector('#nickName');
 
 const createUser = (user) => {
-  const messagesUl = document.querySelector('#users');
+  const userUl = document.querySelector('#users');
   const li = document.createElement('li');
   li.innerText = user;
   li.setAttribute('data-testid', 'online-user');
-  messagesUl.appendChild(li);
+  userUl.appendChild(li);
 };
 
 formUser.addEventListener('submit', (e) => {
   e.preventDefault();
-  socket.emit('message', inputUser.value);
+  socket.emit('user', inputUser.value);
   inputMessage.value = '';
   return false;
 });
@@ -32,6 +32,7 @@ formMessage.addEventListener('submit', (e) => {
     chatMessage: inputMessage.value,
     nickname: getNick,
   };
+  console.log('linha 30', inputMessage.value);
   socket.emit('message', obj);
   inputMessage.value = '';
   return false;
@@ -46,3 +47,5 @@ const createMessage = (message) => {
 };
 
 socket.on('message', (message) => createMessage(message));
+
+socket.on('user', (user) => createUser(user));
