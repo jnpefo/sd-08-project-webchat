@@ -1,6 +1,5 @@
 const socket = window.io();
 let idLogado;
-let getNick;
 
 const formMessage = document.querySelector('#message');
 const formUser = document.querySelector('#user');
@@ -37,7 +36,6 @@ formUser.addEventListener('submit', (e) => {
 
 socket.on('welcome', (id, nick) => {
   idLogado = id;
-  getNick = nick;
   createUser(nick);
 });
 
