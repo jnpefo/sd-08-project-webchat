@@ -34,6 +34,5 @@ module.exports = (io) => {
     socket.on('user', (user) => addUser(user, io, id));
 
     socket.on('disconnect', () => deletUser(id, io));
-
   });
 };
