@@ -8,15 +8,11 @@ const inputMessage = document.querySelector('#messageInput');
 const inputUser = document.querySelector('#nickName');
 const pNick = document.querySelector('#nick');
 
-const createUser = (user) => {  
-  pNick.innerText = user;
-};
-
 const creatListUser = (users) => {
-  ulUsers.innerText = '';
   const { [idLogado]: nickName, ...userList } = users;
   const arrayUser = Object.values(userList);
   pNick.innerText = nickName;
+  ulUsers.innerText = '';
   arrayUser.forEach((value) => {
     const userUl = document.querySelector('#users');
     const li = document.createElement('li');
@@ -36,7 +32,7 @@ formUser.addEventListener('submit', (e) => {
 
 socket.on('welcome', (id, nick) => {
   idLogado = id;
-  createUser(nick);
+  creatListUser(nick);
 });
 
 formMessage.addEventListener('submit', (e) => {
@@ -60,4 +56,8 @@ const createMessage = (message) => {
 
 socket.on('message', (message) => createMessage(message));
 
-socket.on('user', (user) => creatListUser(user));
+socket.on('user', (objNicks) => creatListUser(objNicks));
+
+socket.on('removeUser', (objNicks) => creatListUser(objNicks));
+
+socket.on('allUser', (objNicks) => creatListUser(objNicks));
