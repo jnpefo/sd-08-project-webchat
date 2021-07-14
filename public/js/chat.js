@@ -30,11 +30,6 @@ formUser.addEventListener('submit', (e) => {
   return false;
 });
 
-socket.on('welcome', (id, nick) => {
-  idLogado = id;
-  creatListUser(nick);
-});
-
 formMessage.addEventListener('submit', (e) => {
   e.preventDefault();
   const obj = {
@@ -53,6 +48,23 @@ const createMessage = (message) => {
   li.innerText = message;
   messagesUl.appendChild(li);
 };
+
+const allChat = (historyChat) => {
+  const messagesUl = document.querySelector('#messages');
+  historyChat.forEach((e) => {
+    const { timestamp, nickname, message } = e;
+    const li = document.createElement('li');
+    li.setAttribute('data-testid', 'message');
+    li.innerText = `${timestamp} - ${nickname}: ${message}`;
+    messagesUl.appendChild(li);
+  });
+};
+
+socket.on('welcome', (id, nick, historyChat) => {
+  idLogado = id;
+  creatListUser(nick);
+  allChat(historyChat);
+});
 
 socket.on('message', (message) => createMessage(message));
 
