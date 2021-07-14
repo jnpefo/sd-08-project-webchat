@@ -1,5 +1,6 @@
 const socket = window.io();
 let idLogado;
+const DATA_TESTEID = 'data-testid';
 
 const formMessage = document.querySelector('#message');
 const formUser = document.querySelector('#user');
@@ -17,7 +18,7 @@ const creatListUser = (users) => {
     const userUl = document.querySelector('#users');
     const li = document.createElement('li');
     li.innerText = value;
-    li.setAttribute('data-testid', 'online-user');
+    li.setAttribute(DATA_TESTEID, 'online-user');
     li.setAttribute('id', 'online-user');
     userUl.appendChild(li);
   });
@@ -44,7 +45,7 @@ formMessage.addEventListener('submit', (e) => {
 const createMessage = (message) => {
   const messagesUl = document.querySelector('#messages');
   const li = document.createElement('li');
-  li.setAttribute('data-testid', 'message');
+  li.setAttribute(DATA_TESTEID, 'message');
   li.innerText = message;
   messagesUl.appendChild(li);
 };
@@ -54,7 +55,7 @@ const allChat = (historyChat) => {
   historyChat.forEach((e) => {
     const { timestamp, nickname, message } = e;
     const li = document.createElement('li');
-    li.setAttribute('data-testid', 'message');
+    li.setAttribute(DATA_TESTEID, 'message');
     li.innerText = `${timestamp} - ${nickname}: ${message}`;
     messagesUl.appendChild(li);
   });
