@@ -5,20 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Chat</title>
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/0a784d05f8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Bem vindo ao Web Chat!</h1>
-  <form action="" id='user'>
-    <input id="nickName" autocomplete="off" data-testid="nickname-box" /><button data-testid="nickname-button">Salvar</button>
-  </form> 
-  <h2>Lista de usuários</h2>
-  <p id=nick data-testid="online-user"></p>
-  <ul id="users"></ul>
-  <h2>Mensagens</h2>
-  <ul id="messages"></ul>
-  <form action="" id='message'>
-    <input id="messageInput" autocomplete="off" data-testid="message-box" /><button data-testid="send-button">Enviar</button>
-  </form>
+  <header class="d-flex justify-content-center">Bem vindo ao Web Chat!</header>
+  <div class="d-flex bd-highlight">
+    <div class="p-2 w-100 bd-highlight">
+      <form action="" id='user' class="d-flex bd-highlight">
+        <input id="nickName" autocomplete="off" data-testid="nickname-box" class="p-2 w-100 bd-highlight shadow p-3 mb-5 bg-white rounded"/>
+        <button data-testid="nickname-button" class="shadow p-3 mb-5 rounded p-2 flex-shrink-1 bd-highlight btn btn-info">Salvar <i class="far fa-save"></i></button>
+      </form> 
+      <div class="list-group">
+        <h2 class="d-flex justify-content-center">Lista de usuários</h2>
+        <ul id=nick data-testid="online-user" class="list-group-item active d-flex justify-content-center"></ul>
+        <ul id="users"></ul>
+      </div>
+    </div>
+    <div class="p-2 flex-shrink-1 bd-highlight">
+      <h2 class="d-flex justify-content-center">Mensagens</h2>
+      <div style="position: relative; overflow: auto; height: 450px; border: solid 1px">
+        <ul id="messages"></ul>
+      </div>
+    </div>
+  </div>
+  <footer class="fixed-bottom">
+    <form action="" id='message' class="d-flex bd-highlight">
+      <input id="messageInput" autocomplete="off" data-testid="message-box"  class="p-2 w-100 bd-highlight shadow p-3 mb-5 bg-white rounded"/>
+      <button data-testid="send-button" class="shadow p-3 mb-5 rounded btn btn-info p-2 flex-shrink-1 bd-highlight">Enviar <i class="far fa-paper-plane"></i></button>
+    </form>
+  </footer>
   <script src="/socket.io/socket.io.js"></script>
   <script src='./js/chat.js'></script>
 </body>

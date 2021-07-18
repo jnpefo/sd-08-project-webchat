@@ -19,6 +19,7 @@ const creatListUser = (users) => {
     const li = document.createElement('li');
     li.innerText = value;
     li.setAttribute(DATA_TESTEID, 'online-user');
+    li.setAttribute('class', 'list-group-item list-group-item-action d-flex justify-content-center');
     li.setAttribute('id', 'online-user');
     userUl.appendChild(li);
   });
