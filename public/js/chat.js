@@ -9,6 +9,11 @@ const inputMessage = document.querySelector('#messageInput');
 const inputUser = document.querySelector('#nickName');
 const pNick = document.querySelector('#nick');
 
+const rollScrollDown = () => {
+  const objScrDiv = document.querySelector('.ulMessages');
+  objScrDiv.scrollTop = objScrDiv.scrollHeight;
+};
+
 const creatListUser = (users) => {
   const { [idLogado]: nickName, ...userList } = users;
   const arrayUser = Object.values(userList);
@@ -23,6 +28,7 @@ const creatListUser = (users) => {
     li.setAttribute('id', 'online-user');
     userUl.appendChild(li);
   });
+  rollScrollDown();
 };
 
 formUser.addEventListener('submit', (e) => {
@@ -49,6 +55,7 @@ const createMessage = (message) => {
   li.setAttribute(DATA_TESTEID, 'message');
   li.innerText = message;
   messagesUl.appendChild(li);
+  rollScrollDown();
 };
 
 const allChat = (historyChat) => {
@@ -60,6 +67,7 @@ const allChat = (historyChat) => {
     li.innerText = `${timestamp} - ${nickname}: ${message}`;
     messagesUl.appendChild(li);
   });
+  rollScrollDown();
 };
 
 socket.on('welcome', (id, nick, historyChat) => {
@@ -75,3 +83,5 @@ socket.on('user', (objNicks) => creatListUser(objNicks));
 socket.on('removeUser', (objNicks) => creatListUser(objNicks));
 
 socket.on('allUser', (objNicks) => creatListUser(objNicks));
+
+rollScrollDown();
