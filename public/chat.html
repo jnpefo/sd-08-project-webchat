@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Chat</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/chat.css">
+  <script src="https://kit.fontawesome.com/0a784d05f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <input type="checkbox" id="navicon" class="navicon">
+  <div class="nav-toggle">
+    <label for="navicon" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <nav class="sidebar">
+    <p class="header">Bem vindo ao Web Chat!</p>
+    <div class="d-flex p-2 w-50 bd-highlight">
+      <div class="bd-highlight w-100">
+        <h3 class="d-flex justify-content-center">Quer trocar seu nick?</h3>
+        <form id='user' class="d-flex bd-highlight">
+          <input id="nickName" autocomplete="off" data-testid="nickname-box" class="w-100 form-control-sm shadow mb-5 rounded" placeholder="Digite aqui, caso queria trocar seu nick"/>
+          <button data-testid="nickname-button" class="shadow rounded-pill btn-info btn-sm">Salvar <i class="far fa-save"></i></button>
+        </form> 
+        <div class="list-group">
+          <h2 class="d-flex justify-content-center">Lista de usuários</h2>
+          <div class="ulUsuarios">
+            <ul id=nick data-testid="online-user" class="list-group-item active d-flex justify-content-center"></ul>
+            <ul id="users"></ul>
+          </div>
+        </div>
+      </div>
+  </nav>
+    <div class="p-2 w-50 bd-highlight message">
+      <h2 class="d-flex justify-content-center">Mensagens</h2>
+      <div class="ulMessages">
+        <ul id="messages"></ul>
+      </div>
+    </div>
+  <footer>
+    <form id='message' class="d-flex bd-highlight">
+      <input id="messageInput" autocomplete="off" data-testid="message-box"  class="w-100 form-control-sm shadow mb-5 rounded" placeholder="Digite aqui sua mensagem"/>
+      <button data-testid="send-button" class="shadow rounded-pill btn-info btn-sm">Enviar <i class="far fa-paper-plane"></i></button>
+    </form>
+  </footer>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='./js/chat.js'></script>
+</body>
+</html>

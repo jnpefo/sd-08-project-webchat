@@ -1,0 +1,152 @@
+body {
+  background: rgb(193, 210, 248);
+  font-family: Georgia, Times, serif;
+}
+
+.ulMessages {
+  background: rgb(181, 198, 235);
+  border: solid 1px;
+  height: 690px;
+  overflow: auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  font-size: 35px;
+  justify-content: center;
+}
+
+input {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 2%;
+}
+
+button {
+  background-color: rgb(80, 245, 245);
+  height: 10%;
+  margin-right: 1%;
+}
+
+.ulUsuarios {
+  height: 550px;
+  overflow: auto;
+  position: relative;
+}
+
+.navicon {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.message {
+  margin-left: 50%;
+  margin-top: 4%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and ( max-width : 450px ) {
+
+  .header {
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .bd-highlight {
+    width: 100% ! important;
+  }
+
+  .message {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .ulMessages {
+    height: 490px;
+  }
+
+  .ulUsuarios {
+    height: 300px;
+  }
+
+  .nav-toggle {
+    background: rgb(79, 81, 240);
+    display: inline;
+    height: 6.5%;
+    padding: 3%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+  }
+
+  .hamburger {
+    font-size: 150%;
+    height: 0.8em;
+    position: relative;
+    width: 1.08em;
+  }
+
+  .hamburger span {
+    background: rgb(0, 0, 0);
+    height: 0.185em;
+    position: absolute;
+    transition: 0.5s all;
+    width: 100%;
+  }
+
+  .hamburger span:nth-child( 2 ) {
+    top: 0.36em;
+  }
+
+  .hamburger span:nth-child( 3 ) {
+    top: 0.73em;
+  }
+
+  .sidebar {
+    background: rgb(193, 210, 248);
+    display: inline;
+    height: 100%;
+    position: fixed;
+    transition: 0.2s all;
+    visibility: hidden;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .navicon {
+    display: none;
+  }
+
+  .navicon:checked ~ .sidebar {
+    visibility: visible;
+  }
+
+  .navicon:checked ~ .nav-toggle > .hamburger span {
+    top: 0.36em;
+  }
+
+  .navicon:checked ~ .nav-toggle > .hamburger span:nth-child( 1 ) {
+    transform: rotate(45deg);
+  }
+
+  .navicon:checked ~ .nav-toggle > .hamburger span:nth-child( 2 ) {
+    transform: rotate(45deg);
+  }
+
+  .navicon:checked ~ .nav-toggle > .hamburger span:nth-child( 3 ) {
+    transform: rotate(-45deg);
+  }
+}
