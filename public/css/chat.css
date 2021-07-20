@@ -6,7 +6,7 @@ body {
 .ulMessages {
   background: rgb(181, 198, 235);
   border: solid 1px;
-  height: 690px;
+  height: calc(100vh - 250px);
   overflow: auto;
   position: relative;
 }
