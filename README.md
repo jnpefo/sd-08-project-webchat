@@ -1,3 +1,30 @@
+## Projecto de Web Chat // Web Chat Project
+
+Esse projeto foi desenvolvido durante o estudo na Trybe, que foi usado o socket.io como base // This project was developed during the study at Trybe, which used socket.io as a base
+
+### Como usar // How to use
+
+Ao realizar o clone do proje em sua máquina, será necessário iniciar com [npm install], como usei o mongoDb como base de dados, crie um arquivo [.env], onde deve conter as seguintes variaveis: [DB_URL="Caminho para seu banco" DB_NAME="nome da sua base 'webchat'" PORT="Porta que será usado, usei o '3000'"
+
+When cloning the project on your machine, you need to start with [npm install], as I used mongoDb as database, create a [.env] file, where it must contain the following variables: [DB_URL="Path to your database" DB_NAME="name of your 'webchat' database" PORT="Port that will be used, I used '3000'"
+ 
+### Em funcionamento // In Operation
+
+Caso queria ver o projeto em funcionamento // If you would like to see the project in operation:
+
+https://webchatjnpefo.herokuapp.com/
+
+Obs.: Usei o heroku.com, para o front e o mongodb.com para o back // I used heroku.com, for the front and mongodb.com for the back.
+
+
+Caso queria ver como era o README.md original, segue a baixo // If you want to see what the original README.md looked like, below:
+
+---
+---
+---
+---
+
+
 <!-- 
 https://github.com/tryber/sd-08-project-webchat/pull/15 
 -->
