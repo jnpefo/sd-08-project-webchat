@@ -4,9 +4,9 @@ Esse projeto foi desenvolvido durante o estudo na Trybe, que foi usado o socket.
 
 ### Como usar // How to use
 
-Ao realizar o clone do proje em sua máquina, será necessário iniciar com [npm install], como usei o mongoDb como base de dados, crie um arquivo [.env], onde deve conter as seguintes variaveis: [DB_URL="Caminho para seu banco" DB_NAME="nome da sua base 'webchat'" PORT="Porta que será usado, usei o '3000'"
+Ao realizar o clone do proje em sua máquina, será necessário iniciar com [npm install], como usei o mongoDb como base de dados, crie um arquivo [.env], onde deve conter as seguintes variaveis: [DB_URL="Caminho para seu banco" DB_NAME="nome da sua base 'webchat'" PORT="Porta que será usado, usei o '3000'"], caso tenha a extensão "Live Server", só iniciar o na pasta [public/chat.html], ou abrir o arquivo no navegador
 
-When cloning the project on your machine, you need to start with [npm install], as I used mongoDb as database, create a [.env] file, where it must contain the following variables: [DB_URL="Path to your database" DB_NAME="name of your 'webchat' database" PORT="Port that will be used, I used '3000'"
+When cloning the project on your machine, you need to start with [npm install], as I used mongoDb as database, create a [.env] file, where it must contain the following variables: [DB_URL="Path to your database" DB_NAME="name of your 'webchat' database" PORT="Port that will be used, I used '3000'"], if it has the "Live Server" extension, just start it in the [public/chat.html] folder, or open the file in the browser
  
 ### Em funcionamento // In Operation
 
